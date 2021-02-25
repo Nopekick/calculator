@@ -12,6 +12,10 @@ function App() {
   const [logs, changeLogs] = useState(localStorage.getItem("logs") ? JSON.parse(localStorage.getItem("logs")) : []);
 
   useEffect(() => {
+    setInterval(()=>{
+      console.log(logs)
+    }, 6000)
+
     socket = io("https://sezzle-backend.herokuapp.com");
   
     socket.on("connect", () => {
@@ -24,19 +28,24 @@ function App() {
     })
   }, [])
 
+  useEffect(()=>{
+    console.log(logs)
+  }, [logs])
+
   let addLogWrapper = (log) => {
     socket.emit("log", log);
     addLog(log);
   }
 
   let addLog = (log) => {
+    console.log("addLog:", log, logs)
     if(logs.length === 10){
       let temp = logs
       temp.pop()
       changeLogs(temp);
     }
     localStorage.setItem("logs", JSON.stringify([log, ...logs]))
-    changeLogs([log, ...logs])
+    changeLogs(prevLogs => ([log, ...prevLogs]))
   }
 
   return (

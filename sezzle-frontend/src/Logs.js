@@ -8,7 +8,7 @@ export default function Logs(props) {
     <div id="log-box">
         <h1>Logs</h1>
       {props.logs && props.logs.map((log, i)=>{
-          return <div className="log">
+          return <div key={i} className="log">
             {log}
           </div>
       })}
