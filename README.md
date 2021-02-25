@@ -1,5 +1,7 @@
 # created for sezzle
 
+Visit: https://sezzle-frontend-calculator.herokuapp.com/
+
 To start 
 
 Frontend
