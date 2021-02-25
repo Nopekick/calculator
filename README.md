@@ -9,12 +9,14 @@ git clone https://github.com/Nopekick/calculator.git
 
 Frontend (required)
 ```
+cd sezzle-frontend
 npm install
 npm start
 ```
 
 Backend (not required)
 ```
+cd sezzle-backend
 npm install
 node index.js
 ```
