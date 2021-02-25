@@ -1,0 +1,81 @@
+
+#base {
+    width: 340px;
+    height: 480px;
+    /* background: linear-gradient(180deg, rgba(11,245,236,1) 0%, rgba(10,143,158,1) 84%); */
+    background-color: #0bf5ec;
+    border-radius: 15px;
+    padding: 5px;
+    box-sizing: border-box;
+    border: 20px solid black;
+
+    margin-left: 30px;
+    cursor: url('./assets/hand.png'), pointer;
+
+    box-shadow: 0px 0px 20px white;
+}
+
+#screen {
+    width: 250px;
+    height: 65px;
+    background-color: #9dc7d7;
+    margin: auto;
+    border-radius: 15px;
+    border: 15px solid black;
+
+    margin-top: 5px;
+    margin-bottom: 10px;
+    cursor: inherit;
+
+    font-size: 43px;
+    text-align: right;
+    padding-right: 6px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    overflow: scroll;
+}
+
+button {
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    margin-right: 14px;
+    width: 48px;
+
+    outline: none;
+    font-family: 'Open Sans';
+    font-weight: 600;
+    font-size: 24px;
+    cursor: inherit;
+
+    -webkit-box-shadow: 0px 4px 0px rgba(10,143,158,1);
+    -moz-box-shadow: 0px 4px 0px rgba(10,143,158,1);
+    box-shadow: 0px 4px 0px rgba(10,143,158,1);
+}
+
+button:active {
+    -webkit-box-shadow: 0px 2px 0px rgba(10,143,158,1);
+    -moz-box-shadow: 0px 2px 0px rgba(10,143,158,1);
+    box-shadow: 0px 2px 0px rgba(10,143,158,1);
+    position: relative;
+    top:4px;
+}
+
+/* button:hover {
+    -webkit-box-shadow: 0px 4px 0px rgba(10,143,158,1);
+    -moz-box-shadow: 0px 4px 0px rgba(10,143,158,1);
+    box-shadow: 0px 4px 0px rgba(10,143,158,1);
+    position: relative;
+    top:1px;
+} */
+
+.single {
+    height: 48px;
+}
+
+.double {
+    height: 106px;
+}
